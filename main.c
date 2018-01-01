@@ -10,10 +10,12 @@ time. Now, they can play both using the interface designed below.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "/Users/darcy/Desktop/Programming/C/cognitive-games/Numeric Memory/numerical-memory-game.c"
+#include "/Users/darcy/Desktop/cognitive-games/Numeric Memory/numerical-memory-game.c"
 #include "welcome-messages.h"
+#include "user-input.h"
 
 int main(){
 	opening_message();
+	grand_input_function();
 	return 0;	
 }
