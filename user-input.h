@@ -35,7 +35,7 @@ int is_integer_helper(char input[], int test_value){
 	return test_value;
 }
 //This function determines if input is valid or not
-int is_integer(){
+int is_valid(){
 	char acceptable_characters[DIGITS] = {'1','2'}; //List of acceptable digits
 	int is_an_integer = FALSE;//We start by assuming the input is false
 	is_an_integer = is_integer_helper(acceptable_characters, is_an_integer);//We then determine here whether it is appropriate or not
@@ -52,13 +52,15 @@ void error_message(){
 }
 
 int grand_input_function(){
+	int return_value;
 	user_choice();
-	int input = is_integer();
+	int input = is_valid();
 	//printf("We compare %d with %d \n",input, TRUE);
 	while(input != TRUE){
 		error_message();
 		user_choice();
-		input = is_integer();
+		input = is_valid();
 	}
-	return input;
+	return_value = (int)user_input[0]-48;
+	return return_value;
 }

@@ -19,7 +19,8 @@ void initial_operations(char input[], int size){
 	initial_output(input, size);	
 }
 
-void play_game(){
+void play_numeric_memory_game(){
+	printf("We start the code \n");
 	int has_lost = 0; //This contains information on whether the player has lost yet
 	int level = 1; //This is our current level
 	while(has_lost != 1){//Since 1 is true, this loop continues while the player has not lost
